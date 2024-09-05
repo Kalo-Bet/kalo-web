@@ -1,6 +1,8 @@
 "use client"
 import solanaProvider from "./services/solanaProvider";
 import { useWeb3Auth } from "./context/AuthContext";
+import Navbar from "@/components/Navbar/Navbar";
+import Hero from "@/components/Hero/Hero";
 
 export default function Home() {
   const {provider, login} = useWeb3Auth()
@@ -15,9 +17,11 @@ export default function Home() {
   }
 
   return (
-    <main className="p-4">
-     <button className="block" onClick={handleClick}>djdjjde</button>
-     <button onClick={() => login()}>Login</button>
+    <main>
+     {/* <button className="block" onClick={handleClick}>djdjjde</button>
+     <button onClick={() => login()}>Login</button> */}
+      <Navbar />
+      <Hero />
     </main>
   );
 }
