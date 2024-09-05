@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Web3AuthProvider } from "./context/AuthContext";
+import { ThemeProvider } from "./context/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,10 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text`}>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         <Web3AuthProvider>
           {children}
         </Web3AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
