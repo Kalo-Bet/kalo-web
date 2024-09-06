@@ -34,7 +34,9 @@ const config: Config = {
         "btn-hover-dark": "#2561a1",
         "bet-light-bg": "#fffbf8",
         "bet-dark-bg": "#1b1d1c",
-        "danger": "#af3131"
+        "danger": "#af3131",
+        "social-light": "#d9d9d9",
+        "social-dark": "#2d2c2c",
       },
 
     },
