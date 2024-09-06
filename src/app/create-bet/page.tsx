@@ -3,14 +3,21 @@ import Navbar from "@/components/Navbar/Navbar";
 import { useState } from "react";
 import BetDetails from "@/components/BetDetails/BetDetails";
 import BetSuccessModal from "@/components/BetSuccessModal/BetSuccessModal";
+import DepositModal from "@/components/DepositModal/DepositModal";
 
 const CreateBet = () => {
     const [betSuccess, setBetSuccess] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const [isDeposit, setIsDeposit] = useState(false);
 
     const closePopup = () => {
         setIsOpen(false);
         setBetSuccess(true);
+    };
+
+    const closeDeposit = () => {
+        setIsDeposit(false);
+        setIsOpen(true);
     };
 
     return (
@@ -56,14 +63,14 @@ const CreateBet = () => {
                                     <label htmlFor="">Stake Amount</label>
                                     <input className="mt-[16px] w-full px-6 py-3 rounded-lg" type="text" placeholder="stake amount" />
                                 </div>
-                                <button onClick={() => { setIsOpen(true) }} className="self-end w-full px-6 py-3 rounded-lg bg-btn-light dark:bg-btn-dark text-btn-text-light dark:btn-text-dark transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-btn-hover-light dark:hover:bg-btn-hover-dark">Create Bet</button>
+                                <button onClick={() => { setIsDeposit(true) }} className="self-end w-full px-6 py-3 rounded-lg bg-btn-light dark:bg-btn-dark text-btn-text-light dark:btn-text-dark transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-btn-hover-light dark:hover:bg-btn-hover-dark">Create Bet</button>
                             </div>
                         </div>
                     </div>
                 </div>
             }
             <BetSuccessModal isOpen={isOpen} onClose={closePopup} />
-
+            <DepositModal isOpen={isDeposit} onClose={closeDeposit} />
         </>
     )
 }
