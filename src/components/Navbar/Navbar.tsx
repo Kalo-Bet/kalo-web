@@ -28,7 +28,7 @@ const Navbar = () => {
                 <ThemeToggle />
             </div>
             <div className='flex items-center gap-[48px]'>
-                <NotificationIcon />
+                <Link href="/notifications"><NotificationIcon /></Link>
                 <UserIcon />
             </div>
         </div>
