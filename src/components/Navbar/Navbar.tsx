@@ -19,10 +19,12 @@ const Navbar = () => {
                     <p className='font-semibold text-[20px]'>Create bet</p>
                 </div>
                 </Link>
-                <div className='hover:scale-110 transition-all duration-300 cursor-pointer flex items-center gap-6'>
+                <Link href="/live-bets">
+                <div className={`hover:scale-110 transition-all duration-300 cursor-pointer flex items-center gap-6 p-2 ${pathname === '/live-bets' ? "border-b-2 border-light-text dark:border-dark-text" : ""}`}>
                     <PlayIcon />
                     <p className='font-semibold text-[20px]'>Live bet</p>
                 </div>
+                </Link>
                 <ThemeToggle />
             </div>
             <div className='flex items-center gap-[48px]'>
