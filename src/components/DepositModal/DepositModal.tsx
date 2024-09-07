@@ -22,7 +22,7 @@ const DepositModal = ({ isOpen, onClose }: any) => {
 
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50">
-            <div className="relative bg-light-background dark:bg-bet-dark-bg rounded-lg p-8 m-4 max-h-full text-center px-[30px] overflow-y-scroll">
+            <div className="relative bg-light-background dark:bg-bet-dark-bg rounded-lg p-8 m-4 max-h-full text-center px-[30px] overflow-y-scroll no-scrollbar">
                 <CancelIcon onClose={onClose} />
                 <h1 className="font-bold text-[30px] mt-[56px] mb-[27px]">Scan QR Code</h1>
                 <p className="font-medium text-[20px]">Scan this code and pay directly from your wallet</p>
