@@ -1,11 +1,15 @@
 "use client"
+import { useState } from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import BetCard from "@/components/BetCard/BetCard";
 import UserCard from "@/components/UserCard/UserCard";
 import Link from "next/link";
 import { MoveLeft } from "lucide-react"
+import WinnerModal from "@/components/WinnerModal/WinnerModal";
 
 const BetNotificationPage = () => {
+    const [open, setOpen] = useState(false);
+
     return (
         <>
             <Navbar />
@@ -51,9 +55,11 @@ const BetNotificationPage = () => {
                             </div>
                         </div>
                     </div>
-                    <button className="mt-[85px] mb-20 w-full px-6 py-3 rounded-lg bg-btn-light dark:bg-btn-dark text-btn-text-light dark:btn-text-dark transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-btn-hover-light dark:hover:bg-btn-hover-dark">Submit</button>
+                    <button onClick={() => { setOpen(true) }} className="mt-[85px] mb-20 w-full px-6 py-3 rounded-lg bg-btn-light dark:bg-btn-dark text-btn-text-light dark:btn-text-dark transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-btn-hover-light dark:hover:bg-btn-hover-dark">Submit</button>
                 </div>
             </div>
+
+            <WinnerModal isOpen={open} onClose={() => { setOpen(false) }} />
         </>
     )
 };

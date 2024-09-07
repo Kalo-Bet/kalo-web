@@ -6,10 +6,10 @@ const SuccessPopup = ({ isOpen, onClose }: any) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50">
-      <div className="relative bg-white dark:bg-gray-800 rounded-lg p-8 m-4 max-h-full text-center">
+      <div className="relative bg-light-background dark:bg-dark-background rounded-lg p-8 m-4 max-h-full text-center">
         <CancelIcon onClose={onClose} />
         <div className="mt-6 mb-4 flex justify-center">
-         <Image alt="ticket" src='/ticket.svg' width={128} height={128} />
+          <Image alt="ticket" src='/ticket.svg' width={128} height={128} />
         </div>
         <h3 className="text-xl font-bold mb-2">Congratulations</h3>
         <p className="mb-6">Your have successfully created your bet</p>
