@@ -15,7 +15,8 @@ const Notifications = () => {
                         <h1 className="font-bold text-[28px]">Notifications</h1>
                     </div>
                     <h2 className="font-bold text-[24px]">Today</h2>
-                    <NotificationCard title="Big brother" message="Your bet has ended please click to verify the winner and complete the bet" />
+                    <Link href="/notifications/1"><NotificationCard className="transition-all duration-300 ease-in-out transform hover:scale-105 cursor-pointer" title="Big brother" message="Your bet has ended please click to verify the winner and complete the bet" /></Link>
+                    <Link href="/notifications/1"><NotificationCard className="transition-all duration-300 ease-in-out transform hover:scale-105 cursor-pointer" title="Big brother" message="Your bet has ended please click to verify the winner and complete the bet" /></Link>
                     <h2 className="font-bold text-[24px] mt-[50px]">Few weeks</h2>
                     <NotificationCard read={true} title="Big brother" message="Your bet has ended please click to verify the winner and complete the bet" />
                     <NotificationCard read={true} title="Big brother" message="Your bet has ended please click to verify the winner and complete the bet" />
