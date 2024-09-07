@@ -37,6 +37,11 @@ const config: Config = {
         "danger": "#af3131",
         "social-light": "#d9d9d9",
         "social-dark": "#2d2c2c",
+        "side-dark": "#212322",
+        "input-bg-light": "#dcdcdc",
+        "input-bg-dark": "#292c2d",
+        "text-input-light": "#626262",
+        "text-input-dark": "#acacac",
       },
 
     },
