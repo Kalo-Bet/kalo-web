@@ -9,17 +9,20 @@ import PlayIcon from '../PlayIcon/PlayIcon';
 import Link from 'next/link';
 import Sidebar from '../SideBar/SideBar';
 import MenuIcon from '../MenuIcon/MenuIcon';
+import MenuNav from '../MenuNav/MenuNav';
 
 const Navbar = () => {
     const pathname = usePathname();
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
     const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
     return (
         <>
             <div className='flex items-center justify-between px-6 lg:px-24 py-6 lg:py-6 bg-nav-light-bg dark:bg-nav-dark-bg drop-shadow-xl'>
-                <MenuIcon />
+                <button onClick={toggleMenu}><MenuIcon /></button>
                 <ThemeBasedImage />
                 <div className='flex items-center gap-12'>
                     <Link href="/create-bet">
@@ -42,6 +45,7 @@ const Navbar = () => {
                 </div>
             </div>
             <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+            <MenuNav isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
         </>
     )
 }
