@@ -14,7 +14,7 @@ const Sidebar = ({ isOpen, onClose }: any) => {
 
     return (
         <div
-            className={`fixed z-50 overflow-y-scroll no-scrollbar top-0 right-0 h-full w-[585px] bg-light-background dark:bg-side-dark p-6 shadow-lg transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'
+            className={`fixed z-50 overflow-y-scroll no-scrollbar top-0 right-0 h-full lg:w-[585px] bg-light-background dark:bg-side-dark p-6 shadow-lg transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'
                 }`}
         >
             <CancelIcon onClose={onClose} />
