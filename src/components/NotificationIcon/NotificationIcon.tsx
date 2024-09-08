@@ -19,7 +19,7 @@ const NotificationIcon = ({iconType}: any) => {
   const imageSrc = currentTheme === 'dark' ? "/notification-dark.svg" : "/notification.svg";
 
   return (
-    <div className={`${iconType ? 'p-3 rounded-xl bg-icon-light dark:bg-icon-dark hover:bg-gray-300 dark:hover:bg-gray-600 hover:scale-110 transition-all duration-300 cursor-pointer' : ''}`}>
+    <div className={`${iconType ? 'p-3 rounded-xl bg-icon-light dark:bg-icon-dark hover:bg-gray-300 dark:hover:bg-gray-600 hover:scale-110 transition-all duration-300 cursor-pointer hidden md:block' : ''}`}>
       <Image src={imageSrc} alt="notification-icon" width={24} height={24} />
     </div>
   );
