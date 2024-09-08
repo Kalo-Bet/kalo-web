@@ -14,9 +14,9 @@ interface BetCardProps {
 const BetCard: React.FC<BetCardProps> = ({ title, price1, price2, time, date, betcount, completed, className }) => {
     return (
 
-        <div className={`bg-bet-light-bg dark:bg-bet-dark-bg px-[52px] py-[24px] mt-[10px] rounded-xl ${className}`}>
+        <div className={`bg-bet-light-bg dark:bg-bet-dark-bg p-2 lg:px-[52px] lg:py-[24px] mt-[10px] rounded-xl ${className}`}>
             <h1 className="text-center font-semibold text-[16px] mb-[44px]">{title}</h1>
-            <div className="flex gap-[156px]">
+            <div className="flex lg:gap-[156px]">
                 <div>
                     <div className=" mb-[12px] flex flex-col items-center justify-center">
                         {completed && <Image alt="completed" src="/done.svg" width={24} height={24} />}

@@ -14,7 +14,7 @@ const MenuNav = ({ isOpen, onClose }: any) => {
             <CancelIcon onClose={onClose} />
             <div className="flex flex-col h-full">
                 <Link href="/create-bet">
-                    <div className={`mt-[72px] mb-[24px] flex hover:scale-110 transition-all duration-300 cursor-pointer items-center gap-6 p-2 border-b-2 border-light-text dark:border-dark-text`}>
+                    <div className='mt-[72px] mb-[24px] flex hover:scale-110 transition-all duration-300 cursor-pointer items-center gap-6 p-2 border-b-2 border-light-text dark:border-dark-tex'>
                         <span className='mt-[-4px] font-semibold text-[28px]'>+</span>
                         <p className='font-semibold text-[20px]'>Create bet</p>
                     </div>
