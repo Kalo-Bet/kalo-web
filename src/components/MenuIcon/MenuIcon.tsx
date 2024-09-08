@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
-const ThemeBasedImage = () => {
+const MenuIcon = () => {
     const { theme, resolvedTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
@@ -17,15 +17,15 @@ const ThemeBasedImage = () => {
     }
 
     const currentTheme = theme === 'system' ? resolvedTheme : theme;
-    const imageSrc = currentTheme === 'dark' ? "/kalo-dark.svg" : "/kalo.svg";
+    const imageSrc = currentTheme === 'dark' ? "/menu-dark.svg" : "/menu.svg";
 
     return (
         <div>
             <Link href="/">
-                <Image className="w-16 h-16 md:w-24 sm:h-24" src={imageSrc} alt="logo" width={100} height={100} />
+                <Image className="lg:hidden w-6 h-6" src={imageSrc} alt="logo" width={100} height={100} />
             </Link>
         </div>
-    );
-};
+    )
+}
 
-export default ThemeBasedImage;
+export default MenuIcon

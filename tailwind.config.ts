@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'hero-img': "url('/kalo-hero.svg')",
+        'mobile-hero': "url('/mobile-hero.svg')",
         'dark-logo': "url('/kalo-dark.svg')",
       },
       colors: {
