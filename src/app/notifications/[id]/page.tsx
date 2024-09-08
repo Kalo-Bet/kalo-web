@@ -13,7 +13,7 @@ const BetNotificationPage = () => {
     return (
         <>
             <Navbar />
-            <div className="flex justify-center mt-[73px] mx-[150px]">
+            <div className="flex justify-center mt-[50px] lg:mt-[73px] mx-2 lg:mx-[150px]">
                 <div>
                     <div className="flex items-center gap-[20px]">
                         <Link href="/notifications"><MoveLeft /></Link>

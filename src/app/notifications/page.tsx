@@ -8,7 +8,7 @@ const Notifications = () => {
     return (
         <>
             <Navbar />
-            <div className="flex justify-center mt-[73px] mb-[73px] mx-[150px]">
+            <div className="flex justify-center mt-50px] lg:mt-[73px] mb-[50px] lg:mb-[73px] mx-2 lg:mx-[150px]">
                 <div>
                     <div className="flex items-center gap-[20px] mt-[50px] mb-[50px]">
                         <Link href="/"><Image alt="arrow-icon" src="/arrow_back.svg" height={16} width={16} /></Link>
