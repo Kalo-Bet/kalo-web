@@ -10,14 +10,25 @@ import Link from 'next/link';
 import Sidebar from '../SideBar/SideBar';
 import MenuIcon from '../MenuIcon/MenuIcon';
 import MenuNav from '../MenuNav/MenuNav';
+import { useWeb3Auth } from '@/app/context/AuthContext';
 
 const Navbar = () => {
     const pathname = usePathname();
+    const { loginIn, login} = useWeb3Auth()
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-    const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+
+    
+
+    const handleShowProfile = () => {
+        if(loginIn === false) {
+            login()
+        } else {
+            setIsSidebarOpen(true)
+        }
+    }
 
     return (
         <>
@@ -41,7 +52,7 @@ const Navbar = () => {
                 </div>
                 <div className='flex items-center gap-[48px]'>
                     <Link href="/notifications"><NotificationIcon iconType={true} /></Link>
-                    <button onClick={toggleSidebar}><UserIcon /></button>
+                    <button onClick={handleShowProfile}><UserIcon /></button>
                 </div>
             </div>
             <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
